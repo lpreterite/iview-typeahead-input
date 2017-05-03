@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>iview-typeahead-input</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{ title }}</h1>
+      <code>{{ selection | toString }}</code>
+      <typeahead-input :src="src" @changed="selection = arguments[0]"></typeahead-input>
+    </div>
+    <script src="/build.js"></script>
+  </body>
+</html>
