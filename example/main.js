@@ -1,6 +1,6 @@
 import Vue from 'vue';
-// import TypeaheadInput from '../src';
-import TypeaheadInput from '../dist/typeahead-input';
+import TypeaheadInput from '../src';
+// import TypeaheadInput from '../dist/typeahead-input';
 import 'iview/dist/styles/iview.css';
 import axios from 'axios';
 

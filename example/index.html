@@ -8,7 +8,7 @@
     <div id="app">
       <h1>{{ title }}</h1>
       <code>{{ selection | toString }}</code>
-      <typeahead-input :src="src" @changed="selection = arguments[0]"></typeahead-input>
+      <typeahead-input placeholder="something..." :src="src" value="销售" @changed="selection = arguments[0]"></typeahead-input>
     </div>
     <script src="/build.js"></script>
   </body>

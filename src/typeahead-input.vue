@@ -44,6 +44,10 @@ export default {
             type: String,
             default: ''
         },
+        value: {
+            type: String,
+            default: ''
+        },
         limit: {
             type: Number,
             default: 10,
@@ -75,6 +79,7 @@ export default {
     },
     data(){
         return {
+            query: this.value,
             selectFirst: this.selectedFirst,
             shown: false,
             queryParamName: this.paramName,
