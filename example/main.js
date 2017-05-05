@@ -17,7 +17,14 @@ var vm = new Vue({
             selection: {
                 id: 0,
                 name: ''
-            }
+            },
+            value: '',
+            valueList: ['销售','市场','人事']
+        }
+    },
+    methods: {
+        random(){
+            this.value = [].concat(this.valueList).sort(()=>Math.random() > 0.5 ? -1 : 1)[0]
         }
     }
 })

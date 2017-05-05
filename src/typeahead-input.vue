@@ -98,6 +98,9 @@ export default {
         },
         paramName(val){
             this.queryParamName = val;
+        },
+        value(val){
+            this.query = val;
         }
     },
     computed: {
@@ -113,6 +116,7 @@ export default {
             this.selected = item;
             this.dirtied = true;
             this.$emit('changed', item);
+            this.$emit('input', item[this.itemTitleKey]);
             this.shown = false;
         },
         prepareResponseData (data) {
