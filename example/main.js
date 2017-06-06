@@ -13,18 +13,21 @@ var vm = new Vue({
     data: function(){
         return {
             title: 'TypeaheadInput',
-            src: '//localhost:8080/typeahead',
+            src: '//localhost:8081/typeahead',
             selection: {
                 id: 0,
                 name: ''
             },
-            value: '',
-            valueList: ['销售','市场','人事']
+            input: '',
+            inputList: ['销售','市场','人事']
         }
     },
     methods: {
         random(){
-            this.value = [].concat(this.valueList).sort(()=>Math.random() > 0.5 ? -1 : 1)[0]
+            this.input = [].concat(this.inputList).sort(()=>Math.random() > 0.5 ? -1 : 1)[0]
+        },
+        clear(){
+            this.$refs.typeaheadInput.clear();
         }
     }
 })

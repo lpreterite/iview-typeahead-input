@@ -22,6 +22,7 @@ var vm = new Vue({
     data: function(){
         return {
             src: '//localhost:8080/typeahead',
+            input: '',
             selection: {
                 id: 0,
                 name: ''
@@ -50,6 +51,7 @@ var vm = new Vue({
         :itemTitleKey="name"
         :selectedFirst="false"
         :convent="convent"
+        v-model="input"
         @changed="selection = arguments[0]"
     ></typeahead-input>
 </div>
@@ -73,7 +75,14 @@ var vm = new Vue({
 
 `convent`: 请求后的数据处理方法，可选
 
+`v-model`: 绑定输入框内容
+
+### methods
+
+`clear()` 清除当前状态 
+
 ### attr
+
 `isEmpty`: 输入空是否为空
 
 `isDirty`: 用于判断是否已选择

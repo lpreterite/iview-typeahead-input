@@ -29,6 +29,6 @@ server.get('/typeahead', (req, res, next) => {
 // Use default router
 server.use(router);
 
-server.listen(8080, () => {
-    console.log('JSON Server is running at http://localhost:8080');
+server.listen(8081, () => {
+    console.log('JSON Server is running at http://localhost:8081');
 });

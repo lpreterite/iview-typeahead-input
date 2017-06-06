@@ -9,7 +9,13 @@
       <h1>{{ title }}</h1>
       <code>{{ selection | toString }}</code>
       <button @click="random">change value</button>
-      <typeahead-input placeholder="something..." :src="src" v-model="value" @changed="selection = arguments[0]"></typeahead-input>
+      <button @click="clear">clear input</button>
+      <typeahead-input
+        ref="typeaheadInput"
+        placeholder="something..."
+        :src="src"
+        v-model="input"
+        @changed="selection = arguments[0]"></typeahead-input>
     </div>
     <script src="/build.js"></script>
   </body>

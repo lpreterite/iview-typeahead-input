@@ -126,6 +126,12 @@ export default {
             return {
                 'ivu-select-item-selected': this.current === index
             }
+        },
+        clear(){
+            this.current = -1;
+            this.value = this.query = '';
+            this.$emit('changed', null);
+            this.$emit('input', '');
         }
     }
 }
